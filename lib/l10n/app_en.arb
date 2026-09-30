@@ -1,0 +1,283 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Home Yoga",
+  "@appTitle": { "description": "Application title" },
+
+  "commonCancel": "Cancel",
+  "commonStart": "Start",
+
+  "languageNameSystem": "System Default",
+  "@languageNameSystem": { "description": "Follow the device language" },
+  "languageSystemSubtitle": "Follows your device language automatically",
+
+  "tabHome": "Home",
+  "tabAchievements": "Achievements",
+  "tabProgress": "Progress",
+  "tabSettings": "Settings",
+
+  "homeGreetingMorning": "Good morning",
+  "homeGreetingAfternoon": "Good afternoon",
+  "homeGreetingEvening": "Good evening",
+  "homeGreetingFallbackName": "there",
+  "homeGreetingLine": "{greeting}, {name}",
+  "@homeGreetingLine": {
+    "description": "Greeting shown in the home app bar",
+    "placeholders": {
+      "greeting": { "type": "String" },
+      "name": { "type": "String" }
+    }
+  },
+
+  "homeSectionStudioFlow": "STUDIO FLOW",
+  "studioHeroTitle": "Join the Flow Together",
+  "studioHeroSubtitle": "Sync with the community, feel the studio energy.",
+  "homeSectionTodaysPractice": "TODAY'S PRACTICE",
+
+  "homeMarkOffTitle": "Mark today as off?",
+  "homeMarkOffBody": "You haven't practiced today yet. Marking it off lets the app know this is a planned rest day instead of a missed one.",
+  "homeMarkOffConfirm": "Mark off",
+
+  "todayPracticeLabel": "TODAY'S PRACTICE",
+  "todayPracticeEmpty": "Couldn't put together today's practice — add a few exercises to your library and pull to refresh.",
+  "todayPracticeCompletedBadge": "COMPLETED",
+  "todayPracticeMeta": "{minutes} min · {moves} moves",
+  "@todayPracticeMeta": {
+    "description": "Duration and move count line on the practice card",
+    "placeholders": {
+      "minutes": { "type": "int" },
+      "moves": { "type": "int" }
+    }
+  },
+  "todayPracticeRepeat": "Completed Today ✓ (Do It Again)",
+
+  "calmCardTitle": "Need a moment?",
+  "calmCardSubtitle": "Sound meditation & mantras",
+
+  "aiCoachCardTitle": "AI Coach",
+  "aiCoachCardSubtitle": "Personalized guidance, pose tips & answers",
+
+  "settingsTitle": "Settings",
+  "settingsSearchHint": "Search",
+  "settingsNoResults": "No settings matched \"{query}\".",
+  "@settingsNoResults": {
+    "placeholders": { "query": { "type": "String" } }
+  },
+  "settingsMemberFallbackName": "HomeYoga Member",
+  "settingsEditProfileHint": "Edit your profile details",
+  "settingsBadgePro": "PRO",
+  "settingsBadgeActive": "ACTIVE",
+
+  "settingsGroupTraining": "YOUR TRAINING & COACHING",
+  "settingsGroupPreferences": "APP PREFERENCES",
+  "settingsGroupAccount": "ACCOUNT & SECURITY",
+  "settingsGroupSupport": "MORE INFO & SUPPORT",
+  "settingsGroupSession": "SESSION",
+
+  "settingsProTitle": "HomeYoga Pro Membership",
+  "settingsProSubtitleActive": "Active Membership (Voice Guide On)",
+  "settingsProSubtitleInactive": "₺300 / month · AI voice narration",
+
+  "settingsGoalsTitle": "Yoga & Fitness Goals",
+  "settingsGoalsSubtitle": "Weekly goals and focus areas",
+
+  "settingsNotificationsTitle": "Notifications & Reminders",
+  "settingsNotificationsSubtitle": "Daily practice times",
+
+  "settingsAppearanceTitle": "Appearance & Theme",
+  "settingsAppearanceSubtitle": "Light / dark theme setting",
+
+  "settingsLanguageTitle": "App Language",
+  "settingsLanguageSubtitle": "Türkçe / English / Français / Español / 中文",
+
+  "settingsSoundTitle": "Sound & Effects",
+  "settingsSoundSubtitle": "Video and voice coaching preferences",
+
+  "settingsPersonalInfoTitle": "Personal Info",
+  "settingsPersonalInfoSubtitle": "Name, surname, height and weight details",
+
+  "settingsPrivacyTitle": "Privacy & Security",
+  "settingsPrivacySubtitle": "Password and data protection",
+
+  "settingsHelpTitle": "Help & FAQ",
+  "settingsHelpSubtitle": "How to use it, pose guide",
+
+  "settingsLegalTitle": "Terms of Use & Privacy",
+  "settingsLegalSubtitle": "Legal notices",
+
+  "settingsAboutTitle": "About HomeYoga",
+  "settingsAboutSubtitle": "Version {version} (Build {build})",
+  "@settingsAboutSubtitle": {
+    "placeholders": {
+      "version": { "type": "String" },
+      "build": { "type": "String" }
+    }
+  },
+
+  "settingsSignOut": "Sign Out",
+  "settingsSignOutDialogTitle": "Sign out?",
+  "settingsSignOutDialogBody": "You will be signed out. You can sign back in at any time.",
+
+  "appearanceSectionTheme": "THEME",
+  "appearanceLightTitle": "Light Theme",
+  "appearanceLightSubtitle": "A fresh, bright colour palette",
+  "appearanceDarkTitle": "Dark Theme",
+  "appearanceDarkSubtitle": "Easy on the eyes: pure black and deep grey tones",
+  "appearanceSystemTitle": "System Default",
+  "appearanceSystemSubtitle": "Follows your device theme automatically",
+
+  "voiceoverAlertTitle": "English Voice Guidance",
+  "voiceoverAlertMessage": "The exercise voiceover is in English. Would you still like to listen to it?",
+  "voiceoverAlertConfirm": "Yes, Listen",
+  "voiceoverAlertDismiss": "Continue in Silence",
+
+  "coachSuggestedWorkoutBadge": "RECOMMENDED PRACTICE",
+  "coachStartPracticeButton": "Start Practice",
+  "coachSetAsTodayPlanButton": "Set as Today's Plan",
+  "coachPlanSetSuccessSnackbar": "Today's practice has been updated with this session! 🧘",
+  "coachPlanAlreadySetBadge": "Today's Plan ✓",
+  "coachSessionMeta": "{minutes} min · {moves} moves",
+  "@coachSessionMeta": {
+    "placeholders": {
+      "minutes": { "type": "int" },
+      "moves": { "type": "int" }
+    }
+  },
+  "coachInputHint": "Ask your AI coach anything...",
+  "coachWelcomeMessage": "Hi! I'm your AI yoga and wellness coach. How are you feeling today?",
+
+  "playerVoiceGuide": "Voice Guide",
+  "playerAudioOn": "Audio On",
+  "playerMusic": "Music",
+  "playerMusicOff": "Music Off",
+  "playerProPurchased": "Purchased",
+  "proSheetTitle": "AI-Powered Voice Guidance",
+  "proSheetBenefit1Title": "Voice Guidance",
+  "proSheetBenefit1Desc": "Stay in the flow on your mat by listening to your instructor without looking at the screen.",
+  "proSheetBenefit2Title": "Form & Alignment Tips",
+  "proSheetBenefit2Desc": "Get timely breathing and posture cues right when they matter.",
+  "proSheetBenefit3Title": "Uninterrupted Audio",
+  "proSheetBenefit3Desc": "Unlimited voice access across the entire exercise library.",
+  "proSheetMonthly": "Monthly Subscription",
+  "proSheetCancelAnytime": "Cancel anytime",
+  "proSheetStartSubscription": "Start Subscription — ₺300/mo",
+  "proSheetContinueWithout": "Continue in Silence",
+  "proSheetActiveTitle": "Subscription Active (Purchased)",
+  "proSheetActiveDesc": "AI voice guidance and all premium features are fully unlocked.",
+  "proSheetDismissActive": "Done",
+
+  "quitWorkoutDialogTitle": "Quit Workout?",
+  "quitWorkoutDialogMessage": "If you quit now, your current progress for this session will be lost. Would you like to resume?",
+  "quitWorkoutResumeButton": "Resume Workout",
+  "quitWorkoutConfirmButton": "Quit Workout",
+
+  "settingsDeleteAccountTitle": "Delete Account & Data",
+  "settingsDeleteAccountSubtitle": "Permanently erase your account and workout history",
+  "settingsDeleteAccountDialogTitle": "Delete Account Permanently?",
+  "settingsDeleteAccountDialogMessage": "This action is permanent and cannot be undone. Your profile, streak, XP, and full practice history will be permanently erased.",
+  "settingsDeleteAccountConfirmButton": "Delete My Account",
+  "settingsDeleteAccountSuccessSnackbar": "Your account and data have been permanently deleted.",
+
+  "settingsClearDataTitle": "Clear Local Data",
+  "settingsClearDataDialogTitle": "Clear Local Data?",
+  "settingsClearDataDialogMessage": "Your practice log, streak, and preferences on this device will be reset. This cannot be undone.",
+  "settingsClearDataConfirmButton": "Clear Data",
+  "settingsClearDataSuccessSnackbar": "Local data cleared.",
+
+  "aboutScreenTitle": "About HomeYoga",
+  "aboutScreenTagline": "HomeYoga builds you a personalized practice every day from your own level, goals and schedule — so showing up is the only thing you have to think about.",
+  "aboutScreenSupportHeader": "Support",
+  "aboutScreenEmailSupport": "Email support",
+  "aboutScreenVersion": "Version",
+  "aboutScreenBuild": "Build",
+  "aboutScreenLicenses": "Open-source licenses",
+
+  "faqScreenTitle": "Help & FAQ",
+  "faqSectionPractice": "Practice & Sessions",
+  "faqQ1": "How is my daily practice chosen?",
+  "faqA1": "Each day the app builds a session from your fitness level, goals, and equipment, while rotating poses so your practice keeps progressing.",
+  "faqQ2": "What if I cannot practise today?",
+  "faqA2": "Tap 'Mark today off' on the monthly card. A declared rest day is recorded as a deliberate choice and does not break your streak.",
+  "faqQ3": "Can I repeat a session?",
+  "faqA3": "Yes! You can replay any completed session to earn additional minutes and XP, and the day remains marked as completed.",
+  "faqSectionProgress": "Progress & Garden",
+  "faqQ4": "How does the garden work?",
+  "faqA4": "Every week of the year gets its own pot. Practising makes that week's plant grow, while consistent practice keeps it thriving.",
+  "faqQ5": "Why did my streak reset?",
+  "faqA5": "A streak counts consecutive days with a practice or declared rest day. A day passed without either breaks the streak.",
+
+  "privacyScreenTitle": "Privacy & Security",
+  "privacySectionAccount": "Account",
+  "privacySignedInAs": "Signed in as",
+  "privacyPasswordTitle": "Password",
+  "privacyPasswordSubtitle": "Managed securely by your authentication provider",
+  "privacySectionStorage": "Data & Privacy",
+  "privacyDeviceHeading": "On this device",
+  "privacyDeviceBody": "Your practice log, streak, badges and preferences are kept securely on this device.",
+  "privacyServerHeading": "On the cloud",
+  "privacyServerBody": "When signed in, your profile and progress are synced securely so they follow you across devices.",
+  "privacyAiHeading": "AI Coach Privacy",
+  "privacyAiBody": "Messages you send to the coach are processed securely to provide personalized wellness answers. Never share financial or sensitive medical details.",
+  "privacySectionActions": "Account Actions",
+
+  "legalScreenTitle": "Terms & Privacy",
+  "legalTermsHeading": "Terms of Use",
+  "legalTermsBody": "By using Home Yoga you agree to use it for your own personal wellness practice. The content may not be redistributed without permission.",
+  "legalHealthHeading": "Health Disclaimer",
+  "legalHealthBody": "Home Yoga is a general wellness application and does not provide medical diagnosis. Please consult a doctor before beginning any new physical exercise if you have pre-existing health conditions.",
+  "legalSubHeading": "Subscriptions",
+  "legalSubBody": "HomeYoga PRO is billed monthly and renews automatically until cancelled in your store account settings.",
+  "legalPrivacyHeading": "Privacy Policy",
+  "legalPrivacyBody": "We only collect data necessary for your personalized yoga experience: your profile, fitness goals, and practice logs. We never sell your data or use it for advertising.",
+  "legalRightsHeading": "Your Rights",
+  "legalRightsBody": "You can view and update your profile, clear your local data, or permanently delete your account and all associated cloud data at any time from Privacy & Security.",
+
+  "aboutScreenCreditsHeader": "Credits",
+  "aboutScreenCreditsBody": "Yoga guidance is curated from traditional sequences. Voice coaching is generated by AI. Designed following Apple Human Interface Guidelines.",
+
+  "faqSectionPro": "Account & Pro",
+  "faqQ6": "What does Pro add?",
+  "faqA6": "Pro enables AI voice coaching: spoken guidance through each pose, form cues, and unlimited audio for the entire library.",
+  "faqQ7": "Is Home Yoga medical advice?",
+  "faqA7": "No. Home Yoga is a general wellness application. If you have any medical conditions, please consult a doctor before starting.",
+
+  "workoutRotatePhoneTitle": "Rotate Your Phone",
+  "workoutRotatePhoneSubtitle": "Rotate your phone for a full-screen experience.",
+  "workoutRotatePhoneContinuePortrait": "Continue in portrait",
+  "workoutRotatePhoneBothDirections": "Left or right",
+  "workoutRotatePhoneSwitchLandscape": "Enter Landscape",
+
+  "coachCreditBadge": "{count} / 5 Left",
+  "@coachCreditBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "coachCreditBadgeUnlimited": "PRO",
+  "coachQuotaExhaustedTitle": "Daily Coach Credits Exhausted",
+  "coachQuotaExhaustedBody": "Your coach credits for today are exhausted. Watch 1 ad to earn +2 questions or upgrade to PRO for unlimited chat.",
+  "coachWatchAdOption": "Watch 1 Ad (+2 Questions)",
+  "coachUpgradeProOption": "Upgrade to PRO (Unlimited Chat)",
+  "coachRewardSuccessSnackbar": "🎉 You earned 2 new questions!",
+  "playerVoiceoverAdTrialButton": "Watch 1 Ad, Unlock Free Voice Guide For This Session",
+  "playerVoiceoverTrialUsedNote": "You have used your 1-session free voice guide trial. Upgrade to PRO for unlimited voice guide across all workouts.",
+  "playerVoiceoverTrialUnlockedSnackbar": "🎉 Pro Voice Guide unlocked for this workout!",
+  "playerVoiceoverTrialRewardTitle": "Pro Voice Guide (1 Session Trial)",
+  "adSponsoredLabel": "SPONSORED AD",
+  "adRewardReady": "Reward Ready!",
+  "adRewardCountdown": "Reward in: {seconds}s",
+  "@adRewardCountdown": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "adRewardSuccess": "Congratulations! Reward Added 🎉",
+  "adRewardClosePromptTitle": "Close Ad?",
+  "adRewardClosePromptBody": "If you exit now, you will not earn the reward.",
+  "adRewardKeepWatching": "Keep Watching",
+  "adRewardExit": "Exit"
+}

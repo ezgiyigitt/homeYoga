@@ -1,0 +1,252 @@
+{
+  "@@locale": "zh",
+
+  "appTitle": "Home Yoga",
+  "commonCancel": "取消",
+  "commonStart": "开始",
+
+  "languageNameSystem": "系统默认",
+  "languageSystemSubtitle": "自动跟随设备系统语言",
+
+  "tabHome": "首页",
+  "tabAchievements": "成就",
+  "tabProgress": "进度",
+  "tabSettings": "设置",
+
+  "homeGreetingMorning": "早上好",
+  "homeGreetingAfternoon": "下午好",
+  "homeGreetingEvening": "晚上好",
+  "homeGreetingFallbackName": "朋友",
+  "homeGreetingLine": "{greeting}，{name}",
+
+  "homeSectionStudioFlow": "工作室流动",
+  "studioHeroTitle": "与大家一起流动",
+  "studioHeroSubtitle": "融入社区共鸣，感受工作室的能量。",
+  "homeSectionTodaysPractice": "今日练习",
+
+  "homeMarkOffTitle": "将今天标记为休息日？",
+  "homeMarkOffBody": "您今天尚未开始练习。标记后应用会将其视为计划内的休息，而非缺卡。",
+  "homeMarkOffConfirm": "标记为休息",
+
+  "todayPracticeLabel": "今日练习",
+  "todayPracticeEmpty": "无法生成今日练习——请在库中添加动作后下拉刷新。",
+  "todayPracticeCompletedBadge": "已完成",
+  "todayPracticeMeta": "{minutes} 分钟 · {moves} 个动作",
+  "todayPracticeRepeat": "今日已完成 ✓ (再次练习)",
+
+  "calmCardTitle": "需要片刻宁静吗？",
+  "calmCardSubtitle": "声音冥想与颂歌",
+
+  "aiCoachCardTitle": "AI 教练",
+  "aiCoachCardSubtitle": "个性化指导、体式要点与答疑",
+
+  "settingsTitle": "设置",
+  "settingsSearchHint": "搜索",
+  "settingsNoResults": "未找到与 \"{query}\" 相关的设置。",
+  "settingsMemberFallbackName": "HomeYoga 会员",
+  "settingsEditProfileHint": "编辑个人资料",
+  "settingsBadgePro": "PRO",
+  "settingsBadgeActive": "生效中",
+
+  "settingsGroupTraining": "您的训练与辅导",
+  "settingsGroupPreferences": "应用偏好",
+  "settingsGroupAccount": "账户与安全",
+  "settingsGroupSupport": "更多信息与支持",
+  "settingsGroupSession": "会话",
+
+  "settingsProTitle": "HomeYoga Pro 会员",
+  "settingsProSubtitleActive": "已开通会员（语音指导开启）",
+  "settingsProSubtitleInactive": "₺300 / 月 · AI 智能语音解说",
+
+  "settingsGoalsTitle": "瑜伽与健身目标",
+  "settingsGoalsSubtitle": "每周目标与专注重点",
+
+  "settingsNotificationsTitle": "通知与提醒",
+  "settingsNotificationsSubtitle": "每日练习时间提醒",
+
+  "settingsAppearanceTitle": "外观与主题",
+  "settingsAppearanceSubtitle": "浅色 / 深色主题设置",
+
+  "settingsLanguageTitle": "应用语言",
+  "settingsLanguageSubtitle": "Türkçe / English / Français / Español / 中文",
+
+  "settingsSoundTitle": "声音与音效",
+  "settingsSoundSubtitle": "视频与语音辅导偏好",
+
+  "settingsPersonalInfoTitle": "个人信息",
+  "settingsPersonalInfoSubtitle": "姓名、身高与体重信息",
+
+  "settingsPrivacyTitle": "隐私与安全",
+  "settingsPrivacySubtitle": "密码与数据保护",
+
+  "settingsHelpTitle": "帮助与常见问题",
+  "settingsHelpSubtitle": "使用说明、体式指南",
+
+  "settingsLegalTitle": "使用条款与隐私政策",
+  "settingsLegalSubtitle": "法律声明",
+
+  "settingsAboutTitle": "关于 HomeYoga",
+  "settingsAboutSubtitle": "版本 {version} (内部版本 {build})",
+
+  "settingsSignOut": "退出登录",
+  "settingsSignOutDialogTitle": "退出登录？",
+  "settingsSignOutDialogBody": "您将被登出当前账户。您可以随时重新登录。",
+
+  "appearanceSectionTheme": "主题",
+  "appearanceLightTitle": "浅色模式",
+  "appearanceLightSubtitle": "清新明亮的配色风格",
+  "appearanceDarkTitle": "深色模式",
+  "appearanceDarkSubtitle": "舒适护眼：纯黑与深灰质感",
+  "appearanceSystemTitle": "跟随系统",
+  "appearanceSystemSubtitle": "自动跟随设备的系统主题",
+
+  "voiceoverAlertTitle": "英语语音指导",
+  "voiceoverAlertMessage": "动作的语音旁白为英语。您仍希望播放吗？",
+  "voiceoverAlertConfirm": "是的，播放",
+  "voiceoverAlertDismiss": "静音继续",
+
+  "coachSuggestedWorkoutBadge": "推荐练习",
+  "coachStartPracticeButton": "开始练习",
+  "coachSetAsTodayPlanButton": "设为今日计划",
+  "coachPlanSetSuccessSnackbar": "今日练习已更新为此疗愈计划！🧘",
+  "coachPlanAlreadySetBadge": "今日计划 ✓",
+  "coachSessionMeta": "{minutes} 分钟 · {moves} 个动作",
+
+  "coachInputHint": "向您的 AI 教练提问任何问题...",
+  "coachWelcomeMessage": "你好！我是您的 AI 瑜伽与健康教练。今天感觉如何？",
+
+  "playerVoiceGuide": "语音指导",
+  "playerAudioOn": "语音开启",
+  "playerMusic": "音乐",
+  "playerMusicOff": "音乐关闭",
+  "playerProPurchased": "已购买",
+  "proSheetTitle": "AI 语音旁白指导",
+  "proSheetBenefit1Title": "语音指导",
+  "proSheetBenefit1Desc": "无需一直紧盯屏幕，在瑜伽垫上聆听教练指引，保持专注沉浸。",
+  "proSheetBenefit2Title": "体式与呼吸提醒",
+  "proSheetBenefit2Desc": "在关键节点获得呼吸节奏与动作体式提示。",
+  "proSheetBenefit3Title": "全动作无限收听",
+  "proSheetBenefit3Desc": "无限制收听动作库中的所有专业语音旁白。",
+  "proSheetMonthly": "包月订阅",
+  "proSheetCancelAnytime": "随时可取消",
+  "proSheetStartSubscription": "开通订阅 — ₺300/月",
+  "proSheetContinueWithout": "静音继续",
+  "proSheetActiveTitle": "会员已生效（已购买）",
+  "proSheetActiveDesc": "AI 语音指导与所有高级特权已为您完全解锁。",
+  "proSheetDismissActive": "完成",
+
+  "quitWorkoutDialogTitle": "退出本次练习？",
+  "quitWorkoutDialogMessage": "如果现在退出，您本次练习的进度将不会被保存。您想继续练习吗？",
+  "quitWorkoutResumeButton": "继续练习",
+  "quitWorkoutConfirmButton": "确认退出",
+
+  "settingsDeleteAccountTitle": "删除账号与数据",
+  "settingsDeleteAccountSubtitle": "永久清除您的个人账号与全部运动历史",
+  "settingsDeleteAccountDialogTitle": "确定永久删除账号？",
+  "settingsDeleteAccountDialogMessage": "此操作无法撤销。您的个人资料、连续天数、经验值及全部练习记录将被永久清除。",
+  "settingsDeleteAccountConfirmButton": "删除我的账号",
+  "settingsDeleteAccountSuccessSnackbar": "您的账号与数据已永久删除。",
+
+  "settingsClearDataTitle": "清除本地数据",
+  "settingsClearDataDialogTitle": "确定清除本地数据？",
+  "settingsClearDataDialogMessage": "此设备上的练习记录、连续天数和偏好设置将被重置。此操作无法撤销。",
+  "settingsClearDataConfirmButton": "清除数据",
+  "settingsClearDataSuccessSnackbar": "本地数据已清除。",
+
+  "aboutScreenTitle": "关于 HomeYoga",
+  "aboutScreenTagline": "HomeYoga 每日根据您的体能水平、目标和时间量身定制练习——让踏上瑜伽垫成为您唯一需要专注的事。",
+  "aboutScreenSupportHeader": "技术支持",
+  "aboutScreenEmailSupport": "邮件支持",
+  "aboutScreenVersion": "版本",
+  "aboutScreenBuild": "内部版本",
+  "aboutScreenLicenses": "开源许可",
+
+  "faqScreenTitle": "帮助与常见问题",
+  "faqSectionPractice": "练习与课程",
+  "faqQ1": "每日练习是如何定制的？",
+  "faqA1": "应用每日根据您的体能水平、目标与器材生成练习，并轮换体式以促进全面进阶。",
+  "faqQ2": "如果我今天无法练习怎么办？",
+  "faqA2": "在月度卡片上点击“标记今日休息”。主动声明的休息日会被计入合理休息，不会中断您的连续天数。",
+  "faqQ3": "我可以重复进行练习吗？",
+  "faqA3": "可以！您可以重练任何已完成的课程以累积更多时长与经验值，当日依然保持已完成状态。",
+  "faqSectionProgress": "进阶与盆栽花园",
+  "faqQ4": "花园机制是如何运作的？",
+  "faqA4": "一年中的每一周都有专属的花盆。完成练习将助长当周植物生长，持之以恒的练习将使其繁茂常青。",
+  "faqQ5": "为什么我的连续天数重置了？",
+  "faqA5": "连续天数记录连续有练习或主动标记休息的日子。若一天既未练习也未标记休息，连续天数将会重置。",
+
+  "privacyScreenTitle": "隐私与安全",
+  "privacySectionAccount": "账号",
+  "privacySignedInAs": "当前登录为",
+  "privacyPasswordTitle": "密码",
+  "privacyPasswordSubtitle": "由您的身份验证提供商安全管理",
+  "privacySectionStorage": "数据与隐私",
+  "privacyDeviceHeading": "本地设备数据",
+  "privacyDeviceBody": "您的练习日志、连续天数、徽章和偏好设置安全保存在本设备中。",
+  "privacyServerHeading": "云端同步",
+  "privacyServerBody": "登录后，您的个人资料与进度将在多设备间安全同步。",
+  "privacyAiHeading": "AI 教练隐私政策",
+  "privacyAiBody": "发送给教练的消息将受到安全处理，仅用于提供个性化健康建议。切勿分享财务或敏感医疗信息。",
+  "privacySectionActions": "账号操作",
+
+  "legalScreenTitle": "条款与隐私",
+  "legalTermsHeading": "使用条款",
+  "legalTermsBody": "使用 Home Yoga 即表示您同意仅将其用于个人身心健康练习。未经许可不得转载或二次分发内容。",
+  "legalHealthHeading": "健康免责声明",
+  "legalHealthBody": "Home Yoga 属于大众健康应用，不提供医疗诊断。如果您已有特定身体健康状况，请在开始任何新的体育锻炼前咨询专业医生。",
+  "legalSubHeading": "会员订阅",
+  "legalSubBody": "HomeYoga PRO 按月计费，并在商店账户设置中取消之前自动续订。",
+  "legalPrivacyHeading": "隐私政策",
+  "legalPrivacyBody": "我们仅收集为您提供个性化瑜伽体验所需的数据：个人资料、健身目标与练习日志。我们绝不出售您的数据，也不用于任何广告推送。",
+  "legalRightsHeading": "您的权利",
+  "legalRightsBody": "您可以随时在“隐私与安全”中查看和更新个人资料、清除本地数据，或永久删除您的账号及关联的全部云端数据。",
+
+  "aboutScreenCreditsHeader": "致谢与制作",
+  "aboutScreenCreditsBody": "动作指导编排自传统瑜伽体式流派。语音指导由人工智能生成。界面设计遵循 Apple 人机交互界面规范（HIG）。",
+
+  "faqSectionPro": "账号与 PRO 会员",
+  "faqQ6": "PRO 会员提供哪些特权？",
+  "faqA6": "PRO 会员解锁 AI 语音指导功能：每个体式的口头要领播报、动作与呼吸提示，以及全部动作库的无限语音畅听。",
+  "faqQ7": "Home Yoga 属于医疗建议吗？",
+  "faqA7": "不属于。Home Yoga 是一款大众身心健康应用。如果您有既往身体病史或身体不适，请在开始练习前咨询专业医生。",
+
+  "workoutRotatePhoneTitle": "请旋转手机",
+  "workoutRotatePhoneSubtitle": "横屏放置手机以获得全屏体验。",
+  "workoutRotatePhoneContinuePortrait": "竖屏继续",
+  "workoutRotatePhoneBothDirections": "向左或向右",
+  "workoutRotatePhoneSwitchLandscape": "切换横屏",
+
+  "coachCreditBadge": "剩余 {count} / 5 次",
+  "@coachCreditBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "coachCreditBadgeUnlimited": "PRO",
+  "coachQuotaExhaustedTitle": "今日教练问答次数已用完",
+  "coachQuotaExhaustedBody": "今日教练问答次数已用完。观看 1 个广告获得 +2 次提问机会，或升级到 PRO 无限制畅聊。",
+  "coachWatchAdOption": "观看 1 个广告 (+2 次提问)",
+  "coachUpgradeProOption": "升级到 PRO (无限制对话)",
+  "coachRewardSuccessSnackbar": "🎉 您获得了 2 次新的提问机会！",
+  "playerVoiceoverAdTrialButton": "观看 1 个广告，本节课免费解锁 Pro 语音指导",
+  "playerVoiceoverTrialUsedNote": "您已使用 1 节课免费语音试用。升级到 PRO 可在所有课程中无限制使用语音指导。",
+  "playerVoiceoverTrialUnlockedSnackbar": "🎉 本节课已启用 Pro 语音指导！",
+  "playerVoiceoverTrialRewardTitle": "Pro 语音指导（1 次试用）",
+  "adSponsoredLabel": "赞助广告",
+  "adRewardReady": "奖励已就绪！",
+  "adRewardCountdown": "获得奖励还需: {seconds} 秒",
+  "@adRewardCountdown": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "adRewardSuccess": "恭喜！奖励已发放 🎉",
+  "adRewardClosePromptTitle": "关闭广告？",
+  "adRewardClosePromptBody": "如果现在退出，将无法获得奖励。",
+  "adRewardKeepWatching": "继续观看",
+  "adRewardExit": "退出"
+}

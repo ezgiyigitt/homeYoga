@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breathing Lotus — Login Preview</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 20px; padding: 32px 16px;
+    background: #E9EAEE;
+    font: 14px -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    color: #3C3C43;
+  }
+  .frame {
+    position: relative; width: 390px; height: 844px; border-radius: 44px;
+    overflow: hidden; background: #F2F2F7;
+    box-shadow: 0 30px 70px rgba(0,0,0,.28), 0 0 0 10px #1b1b1e, 0 0 0 11px #35353a;
+  }
+  #c { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .ui { position: absolute; inset: 0; padding: 56px 20px 0; display: flex; flex-direction: column; align-items: center; }
+  #mark { width: 48px; height: 48px; display: block; }
+  .wordmark { margin-top: 10px; font-size: 28px; font-weight: 700; letter-spacing: 0.4px; color: #000; }
+  .tagline { margin-top: 4px; font-size: 11px; font-weight: 500; letter-spacing: 1.1px; color: rgba(60,60,67,.62); }
+  .title { align-self: flex-start; margin-top: 52px; font-size: 34px; font-weight: 700; color: #000; letter-spacing: -.4px; }
+  .sub { align-self: flex-start; margin-top: 4px; font-size: 15px; color: rgba(60,60,67,.6); }
+  .card { width: 100%; margin-top: 28px; background: #fff; border-radius: 14px; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+  .cell { padding: 16px; display: flex; align-items: center; gap: 10px; color: rgba(60,60,67,.45); font-size: 15px; }
+  .cell + .cell { border-top: .5px solid rgba(60,60,67,.29); margin-left: 16px; padding-left: 0; }
+  .btn { width: 100%; margin-top: 26px; height: 50px; border-radius: 14px; background: #4A7C59; color: #fff; font-size: 17px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+  .foot { margin-top: 16px; font-size: 15px; color: rgba(60,60,67,.6); }
+  .foot b { color: #4A7C59; font-weight: 600; }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 520px; }
+  button.c { border: 0; padding: 9px 15px; border-radius: 999px; background: #fff; color: #3C3C43; font: inherit; font-weight: 600; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+  button.c[aria-pressed="true"] { background: #4A7C59; color: #fff; }
+  .note { max-width: 460px; text-align: center; line-height: 1.55; color: rgba(60,60,67,.72); }
+  code { background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <canvas id="c"></canvas>
+  <div class="ui">
+    <canvas id="mark"></canvas>
+    <div class="wordmark">HOME YOGA</div>
+    <div class="tagline">WELLNESS · MOVEMENT</div>
+    <div class="title">Sign In</div>
+    <div class="sub">Welcome back to your wellness journey.</div>
+    <div class="card">
+      <div class="cell">✉️ Email</div>
+      <div class="cell">🔒 Password</div>
+    </div>
+    <div class="btn">Sign In</div>
+    <div class="foot">Don't have an account? <b>Sign Up</b></div>
+  </div>
+</div>
+
+<div class="controls">
+  <button class="c" id="bPal" aria-pressed="false">Bloom palette</button>
+  <button class="c" id="bMotes" aria-pressed="true">Pollen</button>
+  <button class="c" id="bUi" aria-pressed="true">UI overlay</button>
+  <button class="c" id="bSlow" aria-pressed="false">Half speed</button>
+  <button class="c" id="bZoom" aria-pressed="false">Zoom in</button>
+</div>
+<div class="note">
+  Every petal is shaded, not filled flat: base→tip gradient, cross-petal curve away from the light, centre vein, darkened rim, and a specular sheen on the petals facing you. Far petals blur out. Breathing cycle <b id="ph">inhale</b> · 4-1-4-1. The logo mark is drawn with <code>Path</code>s too — no emoji, deep sage instead of black.
+</div>
+
+<script>
+const TILT = 1.0, COS = Math.cos(TILT), SIN = Math.sin(TILT);
+const LIGHT_X = -0.62, LIGHT_Y = -0.78;
+
+const PALETTES = {
+  sage:  { base:'#24492F', mid:'#4A7C59', tip:'#BFDCC8', vein:'#1D3B26', aura:'#4A7C59' },
+  bloom: { base:'#D9A9A0', mid:'#F6E4E0', tip:'#FFFCFA', vein:'#C08C86', aura:'#7FA98C' },
+};
+
+const RINGS = [
+  {count:6,  radius:0.42, lift:-0.12, size:1.00, speed: 0.020, phase:0.00},
+  {count:10, radius:0.72, lift: 0.01, size:0.84, speed:-0.014, phase:0.31},
+  {count:14, radius:1.00, lift: 0.14, size:0.68, speed: 0.009, phase:0.17},
+];
+
+function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const MOTES = Array.from({length:30},(_,i)=>{const r=mulberry(i*977+13);
+  return {x:r(),y:r(),z:r(),speed:0.010+r()*0.026,size:0.7+r()*1.8,phase:r()*Math.PI*2};});
+
+const opts = { palette:'sage', motes:true, slow:false, zoom:false };
+
+const hex = h => [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)];
+const rgba = (h,a) => { const c = hex(h); return `rgba(${c[0]},${c[1]},${c[2]},${Math.max(0,Math.min(1,a))})`; };
+const ease = x => { const c=Math.min(1,Math.max(0,x)); return c<0.5 ? 2*c*c : 1-((-2*c+2)**2)/2; };
+
+function breath(t){
+  const inhale=4, hold=1, exhale=4, total=inhale+hold+exhale+hold;
+  const p = t % total;
+  if (p < inhale) return {v: ease(p/inhale), label:'inhale'};
+  if (p < inhale+hold) return {v: 1, label:'hold'};
+  if (p < inhale+hold+exhale) return {v: 1-ease((p-inhale-hold)/exhale), label:'exhale'};
+  return {v: 0, label:'hold'};
+}
+
+function petalPath(len, curl){
+  const w = len*0.34, p = new Path2D();
+  p.moveTo(0,0);
+  p.bezierCurveTo(w*(1.12+curl*0.20), -len*0.23, w*(0.90+curl*0.30), -len*0.69, curl*w*0.42, -len);
+  p.bezierCurveTo(-w*(0.90-curl*0.30), -len*0.69, -w*(1.12-curl*0.20), -len*0.23, 0, 0);
+  p.closePath();
+  return p;
+}
+
+// ── Background bloom ────────────────────────────────────────────────────────
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = cv.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio||1, 2);
+  W = r.width; H = r.height;
+  cv.width = W*dpr; cv.height = H*dpr;
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+new ResizeObserver(resize).observe(cv); resize();
+
+function drawPetal(p, b, P){
+  const len = p.len; if (len <= 0.5) return;
+  const vis = (0.72+0.34*b) * (0.34+0.66*p.depth);
+  if (vis <= 0.01) return;
+  const w = len*0.34;
+  const path = petalPath(len, p.curl);
+  const litSide = LIGHT_X*Math.cos(p.angle) + LIGHT_Y*Math.sin(p.angle);
+  const lit = litSide >= 0 ? 1 : -1;
+  const blurred = p.depth < 0.55;
+
+  ctx.save();
+  ctx.translate(p.x, p.y); ctx.rotate(p.angle);
+  ctx.filter = blurred ? `blur(${((0.55-p.depth)*5+0.4).toFixed(2)}px)` : 'none';
+
+  let g = ctx.createLinearGradient(0, 0, 0, -len);
+  g.addColorStop(0.00, rgba(P.base, vis*0.95));
+  g.addColorStop(0.58, rgba(P.mid,  vis*0.88));
+  g.addColorStop(1.00, rgba(P.tip,  vis*0.70));
+  ctx.fillStyle = g; ctx.fill(path);
+
+  if (!blurred){
+    ctx.save(); ctx.clip(path);
+    g = ctx.createLinearGradient(-lit*w*1.2, 0, lit*w*1.2, 0);
+    g.addColorStop(0.00, rgba(P.vein, vis*0.42));
+    g.addColorStop(0.52, rgba(P.vein, 0));
+    g.addColorStop(1.00, rgba(P.tip,  vis*0.30));
+    ctx.fillStyle = g; ctx.fillRect(-w*1.2, -len, w*2.4, len);
+
+    if (p.depth > 0.62){
+      const sx = lit*w*0.34, sy = -len*0.60, rw = w*0.45, rh = len*0.26;
+      ctx.save(); ctx.translate(sx, sy); ctx.scale(1, rh/rw);
+      g = ctx.createRadialGradient(0,0,0, 0,0, rw);
+      g.addColorStop(0, rgba(P.tip, vis*0.34*(p.depth-0.62)/0.38));
+      g.addColorStop(1, rgba(P.tip, 0));
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0,0,rw,0,6.2832); ctx.fill();
+      ctx.restore();
+    }
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.moveTo(0, -len*0.08);
+    ctx.quadraticCurveTo(p.curl*w*0.20, -len*0.54, p.curl*w*0.34, -len*0.90);
+    ctx.lineWidth = Math.max(0.5, len*0.020); ctx.lineCap = 'round';
+    ctx.strokeStyle = rgba(P.vein, vis*0.30); ctx.stroke();
+
+    ctx.lineWidth = Math.max(0.5, len*0.014);
+    ctx.strokeStyle = rgba(P.vein, vis*0.26); ctx.stroke(path);
+  }
+  ctx.restore();
+  ctx.filter = 'none';
+}
+
+function draw(t){
+  const P = PALETTES[opts.palette];
+  ctx.clearRect(0,0,W,H);
+  const cx = W/2, cy = H*(0.5 + (-0.62)/2);
+  const R = Math.min(W,H)*0.30*(opts.zoom ? 1.55 : 1);
+  const {v:b, label} = breath(t);
+  document.getElementById('ph').textContent = label;
+
+  let g = ctx.createRadialGradient(cx,cy,0,cx,cy,R*2.7);
+  g.addColorStop(0, rgba(P.aura, 0.14*(0.72+0.38*b)));
+  g.addColorStop(1, rgba(P.aura, 0));
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+
+  if (opts.motes) for (const m of MOTES){
+    const depth = 0.35 + m.z*0.65;
+    const y = ((m.y - t*m.speed) % 1 + 1) % 1;
+    const x = m.x + Math.sin(t*0.22 + m.phase)*0.018;
+    ctx.fillStyle = rgba(P.aura, 0.05 + 0.14*m.z);
+    ctx.beginPath(); ctx.arc(x*W, y*H, m.size*depth, 0, 6.2832); ctx.fill();
+  }
+
+  const focal = R*3.4, petals = [];
+  for (const ring of RINGS){
+    const rr = R*ring.radius*(0.86+0.20*b);
+    for (let i=0;i<ring.count;i++){
+      const a = (i/ring.count)*Math.PI*2 + t*ring.speed*Math.PI*2 + ring.phase;
+      const wob = 1 + Math.sin(t*0.8 + i*1.7)*0.028;
+      const x = Math.cos(a)*rr*wob, y = Math.sin(a)*rr*wob;
+      const z = R*ring.lift + Math.sin(t*0.6 + a*2)*R*0.05;
+      const yr = y*COS - z*SIN, zr = y*SIN + z*COS;
+      const k = focal/(focal+zr); if (k<=0) continue;
+      const sx = cx + x*k, sy = cy + yr*k;
+      petals.push({
+        x:sx, y:sy,
+        angle: Math.atan2(sy-cy, sx-cx) + Math.PI/2,
+        len: R*0.34*ring.size*k*(0.88+0.26*b),
+        depth: Math.min(1, Math.max(0, (k-0.76)/0.60)),
+        curl: Math.sin(i*2.4 + ring.phase*3)*0.55,
+      });
+    }
+  }
+  petals.sort((p,q)=>p.depth-q.depth);
+  for (const p of petals) drawPetal(p, b, P);
+
+  const gr = R*(0.30+0.12*b);
+  g = ctx.createRadialGradient(cx,cy,0,cx,cy,gr);
+  g.addColorStop(0, rgba(P.aura, 0.18+0.16*b));
+  g.addColorStop(1, rgba(P.aura, 0));
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx,cy,gr,0,6.2832); ctx.fill();
+
+  const pod = R*(0.070+0.020*b);
+  g = ctx.createRadialGradient(cx-pod*0.45, cy-pod*0.55, 0, cx, cy, pod);
+  g.addColorStop(0.00, rgba(P.tip, 0.92));
+  g.addColorStop(0.45, rgba(P.mid, 0.85));
+  g.addColorStop(1.00, rgba(P.base, 0.80));
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx,cy,pod,0,6.2832); ctx.fill();
+}
+
+// ── Logo mark ───────────────────────────────────────────────────────────────
+const MARK = '#2F5C3A'; // AppColors.primaryDark
+const MARK_PETALS = [
+  [-74,0.62,0.52,0.34],[74,0.62,0.52,0.34],
+  [-46,0.82,0.46,0.52],[46,0.82,0.46,0.52],
+  [-21,0.95,0.40,0.74],[21,0.95,0.40,0.74],
+  [0,1.00,0.42,1.00],
+];
+function drawMark(){
+  const el = document.getElementById('mark');
+  const dpr = Math.min(window.devicePixelRatio||1, 2), S = 48;
+  el.width = S*dpr; el.height = S*dpr;
+  const m = el.getContext('2d');
+  m.setTransform(dpr,0,0,dpr,0,0); m.clearRect(0,0,S,S);
+  const ax = S/2, ay = S*0.90, base = S*0.74;
+
+  for (const [deg, lf, wf, tint] of MARK_PETALS){
+    const len = base*lf, hw = len*wf*0.62;
+    m.save(); m.translate(ax, ay); m.rotate(deg*Math.PI/180);
+    const p = new Path2D();
+    p.moveTo(0,0);
+    p.bezierCurveTo(hw*1.10,-len*0.24, hw*0.86,-len*0.70, 0,-len);
+    p.bezierCurveTo(-hw*0.86,-len*0.70, -hw*1.10,-len*0.24, 0,0);
+    p.closePath();
+    const g = m.createLinearGradient(0,0,0,-len);
+    g.addColorStop(0.00, rgba(MARK, 0.30*tint));
+    g.addColorStop(0.62, rgba(MARK, 0.86*tint));
+    g.addColorStop(1.00, rgba(MARK, 0.55*tint));
+    m.fillStyle = g; m.fill(p);
+    m.lineWidth = Math.max(0.6, S*0.014); m.strokeStyle = rgba(MARK, 0.30*tint); m.stroke(p);
+    m.beginPath(); m.moveTo(0,-len*0.10);
+    m.quadraticCurveTo(hw*0.06, -len*0.55, 0, -len*0.88);
+    m.lineWidth = Math.max(0.5, S*0.010); m.lineCap='round';
+    m.strokeStyle = rgba(MARK, 0.22*tint); m.stroke();
+    m.restore();
+  }
+  m.fillStyle = rgba(MARK, 0.55);
+  m.beginPath(); m.arc(ax, ay - S*0.06, S*0.055, 0, 6.2832); m.fill();
+}
+drawMark();
+
+// ── Loop + controls ─────────────────────────────────────────────────────────
+let simT = 0, last = performance.now();
+function frame(now){
+  const dt = Math.min(0.05, (now-last)/1000); last = now;
+  simT += opts.slow ? dt*0.5 : dt;
+  draw(simT);
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+const toggle = (id, fn) => {
+  const el = document.getElementById(id);
+  el.addEventListener('click', () => {
+    const on = el.getAttribute('aria-pressed') !== 'true';
+    el.setAttribute('aria-pressed', String(on));
+    fn(on);
+  });
+};
+toggle('bPal',    v => opts.palette = v ? 'bloom' : 'sage');
+toggle('bMotes',  v => opts.motes = v);
+toggle('bSlow',   v => opts.slow = v);
+toggle('bZoom',   v => opts.zoom = v);
+toggle('bUi',     v => document.querySelector('.ui').style.display = v ? 'flex' : 'none');
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+name: homeyoga
+description: "Home Yoga — Personalized wellness & fitness app"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Localization (Türkçe / English)
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Navigation
+  go_router: ^14.6.2
+
+  # Backend
+  supabase_flutter: ^2.17.2
+
+  # Video
+  video_player: ^2.14.0
+  chewie: ^1.15.0
+
+  # Gamification
+  flame: ^1.20.0
+
+  # UI
+  google_fonts: ^6.2.1
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+
+  # Charts
+  fl_chart: ^0.69.0
+
+  # Local Storage
+  shared_preferences: ^2.3.3
+
+  # Utils
+  # `any` lets pub pick the exact intl that flutter_localizations pins,
+  # which avoids a version conflict on `flutter pub get`.
+  intl: any
+  uuid: ^4.5.1
+  google_generative_ai: ^0.4.7
+  audioplayers: ^6.8.1
+  http: ^1.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+
+flutter:
+  uses-material-design: true
+  # Generates AppLocalizations from lib/l10n/*.arb (see l10n.yaml)
+  generate: true
+  assets:
+    - assets/images/
+    - assets/videos/

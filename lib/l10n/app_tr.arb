@@ -1,0 +1,252 @@
+{
+  "@@locale": "tr",
+
+  "appTitle": "Home Yoga",
+
+  "commonCancel": "Vazgeç",
+  "commonStart": "Başla",
+
+  "languageNameSystem": "Sistem Dili",
+  "languageSystemSubtitle": "Cihaz dilini otomatik olarak kullanır",
+
+  "tabHome": "Ana Sayfa",
+  "tabAchievements": "Başarımlar",
+  "tabProgress": "İlerleme",
+  "tabSettings": "Ayarlar",
+
+  "homeGreetingMorning": "Günaydın",
+  "homeGreetingAfternoon": "İyi günler",
+  "homeGreetingEvening": "İyi akşamlar",
+  "homeGreetingFallbackName": "yogi",
+  "homeGreetingLine": "{greeting}, {name}",
+
+  "homeSectionStudioFlow": "STÜDYO AKIŞI",
+  "studioHeroTitle": "Birlikte Akışa Katıl",
+  "studioHeroSubtitle": "Toplulukla senkronize ol, stüdyo enerjisini hisset.",
+  "homeSectionTodaysPractice": "BUGÜNÜN PRATİĞİ",
+
+  "homeMarkOffTitle": "Bugünü izin günü olarak işaretle?",
+  "homeMarkOffBody": "Bugün henüz pratik yapmadın. İzin günü olarak işaretlersen uygulama bunu kaçırılmış bir gün değil, planlı bir dinlenme günü olarak sayar.",
+  "homeMarkOffConfirm": "İzin günü yap",
+
+  "todayPracticeLabel": "BUGÜNÜN PRATİĞİ",
+  "todayPracticeEmpty": "Bugünün pratiği oluşturulamadı — kitaplığına birkaç hareket ekleyip aşağı çekerek yenile.",
+  "todayPracticeCompletedBadge": "TAMAMLANDI",
+  "todayPracticeMeta": "{minutes} dk · {moves} hareket",
+  "todayPracticeRepeat": "Bugün Tamamlandı ✓ (Tekrar Yap)",
+
+  "calmCardTitle": "Biraz mola?",
+  "calmCardSubtitle": "Ses meditasyonu ve mantralar",
+
+  "aiCoachCardTitle": "AI Koç",
+  "aiCoachCardSubtitle": "Kişiye özel rehberlik, duruş ipuçları ve yanıtlar",
+
+  "settingsTitle": "Ayarlar",
+  "settingsSearchHint": "Ara",
+  "settingsNoResults": "\"{query}\" ile eşleşen ayar bulunamadı.",
+  "settingsMemberFallbackName": "HomeYoga Üyesi",
+  "settingsEditProfileHint": "Profil bilgilerini düzenle",
+  "settingsBadgePro": "PRO",
+  "settingsBadgeActive": "AKTİF",
+
+  "settingsGroupTraining": "ANTRENMAN VE KOÇLUK",
+  "settingsGroupPreferences": "UYGULAMA TERCİHLERİ",
+  "settingsGroupAccount": "HESAP VE GÜVENLİK",
+  "settingsGroupSupport": "DAHA FAZLA BİLGİ VE DESTEK",
+  "settingsGroupSession": "OTURUM",
+
+  "settingsProTitle": "HomeYoga Pro Üyelik",
+  "settingsProSubtitleActive": "Aktif Üyelik (Sesli Rehber Açık)",
+  "settingsProSubtitleInactive": "₺300 / ay · Yapay zekâ sesli anlatım",
+
+  "settingsGoalsTitle": "Yoga ve Fitness Hedefleri",
+  "settingsGoalsSubtitle": "Haftalık hedefler ve odak alanları",
+
+  "settingsNotificationsTitle": "Bildirimler ve Hatırlatıcılar",
+  "settingsNotificationsSubtitle": "Günlük pratik saatleri",
+
+  "settingsAppearanceTitle": "Görünüm ve Tema",
+  "settingsAppearanceSubtitle": "Açık / koyu tema ayarı",
+
+  "settingsLanguageTitle": "Uygulama Dili",
+  "settingsLanguageSubtitle": "Türkçe / English / Français / Español / 中文",
+
+  "settingsSoundTitle": "Ses ve Efektler",
+  "settingsSoundSubtitle": "Video ve sesli koçluk tercihleri",
+
+  "settingsPersonalInfoTitle": "Kişisel Bilgiler",
+  "settingsPersonalInfoSubtitle": "Ad, soyad, boy ve kilo bilgileri",
+
+  "settingsPrivacyTitle": "Gizlilik ve Güvenlik",
+  "settingsPrivacySubtitle": "Şifre ve veri koruma",
+
+  "settingsHelpTitle": "Yardım ve SSS",
+  "settingsHelpSubtitle": "Nasıl kullanılır, duruş rehberi",
+
+  "settingsLegalTitle": "Kullanım Koşulları ve Gizlilik",
+  "settingsLegalSubtitle": "Yasal bildirimler",
+
+  "settingsAboutTitle": "HomeYoga Hakkında",
+  "settingsAboutSubtitle": "Sürüm {version} (Yapı {build})",
+
+  "settingsSignOut": "Çıkış Yap",
+  "settingsSignOutDialogTitle": "Çıkış yapılsın mı?",
+  "settingsSignOutDialogBody": "Hesabından çıkış yapılacak. İstediğin zaman tekrar giriş yapabilirsin.",
+
+  "appearanceSectionTheme": "TEMA",
+  "appearanceLightTitle": "Açık Tema",
+  "appearanceLightSubtitle": "Ferah ve aydınlık bir renk paleti",
+  "appearanceDarkTitle": "Koyu Tema",
+  "appearanceDarkSubtitle": "Göz yormayan saf siyah ve koyu gri tonlar",
+  "appearanceSystemTitle": "Sistem Varsayılanı",
+  "appearanceSystemSubtitle": "Cihaz temanı otomatik olarak kullanır",
+
+  "voiceoverAlertTitle": "İngilizce Sesli Rehber",
+  "voiceoverAlertMessage": "Egzersiz seslendirmesi İngilizcedir. Yine de dinlemek ister misiniz?",
+  "voiceoverAlertConfirm": "Evet, Dinle",
+  "voiceoverAlertDismiss": "Sessiz Devam Et",
+
+  "coachSuggestedWorkoutBadge": "ÖNERİLEN PRATİK",
+  "coachStartPracticeButton": "Pratiği Başlat",
+  "coachSetAsTodayPlanButton": "Bugünkü Planım Yap",
+  "coachPlanSetSuccessSnackbar": "Bugünün pratiği bu seansla güncellendi! 🧘",
+  "coachPlanAlreadySetBadge": "Bugünkü Planınız ✓",
+  "coachSessionMeta": "{minutes} dk · {moves} hareket",
+  "coachInputHint": "AI koçunuza bir şey sorun...",
+  "coachWelcomeMessage": "Merhaba! Ben senin yapay zekâ yoga ve sağlık koçunum. Bugün nasıl hissediyorsun?",
+
+  "playerVoiceGuide": "Sesli Rehber",
+  "playerAudioOn": "Ses Açık",
+  "playerMusic": "Müzik",
+  "playerMusicOff": "Müzik Kapalı",
+  "playerProPurchased": "Satın Alındı",
+  "proSheetTitle": "AI Destekli Sesli Rehberlik",
+  "proSheetBenefit1Title": "Sesli Rehberlik",
+  "proSheetBenefit1Desc": "Ekrana sürekli bakmadan, matınızdayken eğitmeninizi dinleyerek akışı sürdürün.",
+  "proSheetBenefit2Title": "Form & Duruş İpuçları",
+  "proSheetBenefit2Desc": "Kritik anlarda doğru nefes ve duruş hatırlatmaları alın.",
+  "proSheetBenefit3Title": "Kesintisiz Sesli Erişim",
+  "proSheetBenefit3Desc": "Gelişen tüm egzersiz kütüphanesine sınırsız sesli erişim.",
+  "proSheetMonthly": "Aylık Abonelik",
+  "proSheetCancelAnytime": "İstediğiniz zaman iptal edebilirsiniz",
+  "proSheetStartSubscription": "Aboneliği Başlat — 300 ₺/Ay",
+  "proSheetContinueWithout": "Sessiz Devam Et",
+  "proSheetActiveTitle": "Aboneliğiniz Aktif (Satın Alındı)",
+  "proSheetActiveDesc": "Tüm egzersizlerde yapay zekâ sesli koçluk ve premium özellikler kullanımınıza açıktır.",
+  "proSheetDismissActive": "Tamam",
+
+  "quitWorkoutDialogTitle": "Pratikten Çıkılsın mı?",
+  "quitWorkoutDialogMessage": "Şimdi çıkarsanız bu seanstaki ilerlemeniz kaydedilmeyecektir. Pratiğe devam etmek ister misiniz?",
+  "quitWorkoutResumeButton": "Pratiğe Devam Et",
+  "quitWorkoutConfirmButton": "Pratikten Çık",
+
+  "settingsDeleteAccountTitle": "Hesabı ve Verileri Sil",
+  "settingsDeleteAccountSubtitle": "Hesabınızı ve tüm egzersiz geçmişinizi kalıcı olarak silin",
+  "settingsDeleteAccountDialogTitle": "Hesap Kalıcı Olarak Silinsin mi?",
+  "settingsDeleteAccountDialogMessage": "Bu işlem geri alınamaz. Profiliniz, seriniz, XP puanlarınız ve tüm pratik geçmişiniz kalıcı olarak silinecektir.",
+  "settingsDeleteAccountConfirmButton": "Hesabımı Sil",
+  "settingsDeleteAccountSuccessSnackbar": "Hesabınız ve tüm verileriniz kalıcı olarak silindi.",
+
+  "settingsClearDataTitle": "Cihaz Verilerini Sıfırla",
+  "settingsClearDataDialogTitle": "Cihaz Verileri Sıfırlansın mı?",
+  "settingsClearDataDialogMessage": "Bu cihazdaki pratik geçmişiniz, seriniz ve tercihleriniz sıfırlanacaktır. Bu işlem geri alınamaz.",
+  "settingsClearDataConfirmButton": "Verileri Sıfırla",
+  "settingsClearDataSuccessSnackbar": "Cihaz verileri sıfırlandı.",
+
+  "aboutScreenTitle": "HomeYoga Hakkında",
+  "aboutScreenTagline": "HomeYoga; seviyenize, hedeflerinize ve programınıza göre her gün size özel bir pratik sunar — böylece tek düşünmeniz gereken matın üzerine çıkmaktır.",
+  "aboutScreenSupportHeader": "Destek",
+  "aboutScreenEmailSupport": "E-posta ile destek",
+  "aboutScreenVersion": "Sürüm",
+  "aboutScreenBuild": "Derleme",
+  "aboutScreenLicenses": "Açık kaynak lisansları",
+
+  "faqScreenTitle": "Yardım ve SSS",
+  "faqSectionPractice": "Pratik ve Seanslar",
+  "faqQ1": "Günlük pratiğim nasıl belirlenir?",
+  "faqA1": "Uygulama her gün kondisyon seviyeniz, hedefleriniz ve ekipmanlarınıza göre özel bir seans oluşturur ve hareketleri çeşitlendirerek gelişiminizi destekler.",
+  "faqQ2": "Bugün pratik yapamazsam ne olur?",
+  "faqA2": "Aylık karttan 'Bugünü dinlenme günü yap' seçeneğine dokunabilirsiniz. Bildirilen dinlenme günü bilinçli bir mola olarak kaydedilir ve serinizi bozmaz.",
+  "faqQ3": "Bir seansı tekrar yapabilir miyim?",
+  "faqA3": "Evet! Tamamlanan herhangi bir seansı yeniden uygulayarak ekstra dakika ve XP kazanabilirsiniz; gününüz tamamlandı olarak kalmaya devam eder.",
+  "faqSectionProgress": "Gelişim ve Bahçe",
+  "faqQ4": "Bahçe nasıl çalışır?",
+  "faqA4": "Yılın her haftasının kendine ait bir saksısı vardır. Pratik yaptıkça o haftanın bitkisi büyür, düzenli pratikle canlılığını korur.",
+  "faqQ5": "Serim neden sıfırlandı?",
+  "faqA5": "Seri, pratik yapılan veya dinlenme günü olarak bildirilen ardışık günleri sayar. İkisi de yapılmadan geçen bir gün seriyi sıfırlar.",
+
+  "privacyScreenTitle": "Gizlilik ve Güvenlik",
+  "privacySectionAccount": "Hesap",
+  "privacySignedInAs": "Giriş yapılan hesap",
+  "privacyPasswordTitle": "Şifre",
+  "privacyPasswordSubtitle": "Kimlik doğrulama sağlayıcınız tarafından güvenle yönetilir",
+  "privacySectionStorage": "Veri ve Gizlilik",
+  "privacyDeviceHeading": "Bu cihazda",
+  "privacyDeviceBody": "Pratik günlüğünüz, seriniz, rozetleriniz ve tercihleriniz bu cihazda güvenle saklanır.",
+  "privacyServerHeading": "Bulutta",
+  "privacyServerBody": "Giriş yaptığınızda profiliniz ve ilerlemeniz cihazlar arasında güvenle eşitlenir.",
+  "privacyAiHeading": "Yapay Zekâ Koçu Gizliliği",
+  "privacyAiBody": "Koça gönderdiğiniz mesajlar yalnızca size özel sağlıklı yaşam tavsiyeleri sunmak için işlenir. Lütfen finansal veya hassas tıbbi bilgilerinizi paylaşmayın.",
+  "privacySectionActions": "Hesap İşlemleri",
+
+  "legalScreenTitle": "Koşullar ve Gizlilik",
+  "legalTermsHeading": "Kullanım Koşulları",
+  "legalTermsBody": "Home Yoga'yı kullanarak, uygulamayı yalnızca kendi kişisel esenlik pratiğiniz için kullanmayı kabul etmiş olursunuz. İçerikler izin alınmadan çoğaltılamaz veya dağıtılamaz.",
+  "legalHealthHeading": "Sağlık Uyarısı",
+  "legalHealthBody": "Home Yoga genel bir esenlik uygulamasıdır ve tıbbi teşhis koymaz. Önceden var olan bir sağlık durumunuz varsa lütfen yeni bir fiziksel egzersize başlamadan önce doktorunuza danışın.",
+  "legalSubHeading": "Abonelikler",
+  "legalSubBody": "HomeYoga PRO aylık olarak faturalandırılır ve mağaza hesap ayarlarınızdan iptal edilene kadar otomatik olarak yenilenir.",
+  "legalPrivacyHeading": "Gizlilik Politikası",
+  "legalPrivacyBody": "Yalnızca size özel bir yoga deneyimi sunmak için gereken verileri toplarız: profiliniz, hedefleriniz ve pratik geçmişiniz. Verileriniz asla satılmaz veya reklam amaçlı kullanılmaz.",
+  "legalRightsHeading": "Haklarınız",
+  "legalRightsBody": "Gizlilik ve Güvenlik bölümünden profilinizi görüntüleyebilir ve güncelleyebilir, yerel verilerinizi sıfırlayabilir ya da hesabınızı ve tüm bulut verilerinizi dilediğiniz an kalıcı olarak silebilirsiniz.",
+
+  "aboutScreenCreditsHeader": "Emeği Geçenler",
+  "aboutScreenCreditsBody": "Egzersiz rehberliği geleneksel yoga akışlarından derlenmiştir. Sesli koçluk yapay zekâ tarafından üretilmektedir. Apple İnsan Arayüzü İlkelerine uygun olarak tasarlanmıştır.",
+
+  "faqSectionPro": "Hesap ve Pro",
+  "faqQ6": "Pro üyelik neler sunar?",
+  "faqA6": "Pro üyelik yapay zekâ sesli koçluğu etkinleştirir: her duruşta sesli rehberlik, duruş ipuçları ve tüm egzersiz kütüphanesine sınırsız sesli erişim.",
+  "faqQ7": "Home Yoga tıbbi tavsiye verir mi?",
+  "faqA7": "Hayır. Home Yoga genel bir sağlıklı yaşam uygulamasıdır. Herhangi bir sağlık sorununuz veya rahatsızlığınız varsa başlamadan önce doktorunuza danışınız.",
+
+  "workoutRotatePhoneTitle": "Telefonunuzu Çevirin",
+  "workoutRotatePhoneSubtitle": "Tam ekran için telefonunuzu yatay konuma getirin.",
+  "workoutRotatePhoneContinuePortrait": "Dikeyde devam et",
+  "workoutRotatePhoneBothDirections": "Sola veya sağa çevirin",
+  "workoutRotatePhoneSwitchLandscape": "Yatay Ekrana Geç",
+
+  "coachCreditBadge": "{count} / 5 Hak",
+  "@coachCreditBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "coachCreditBadgeUnlimited": "PRO",
+  "coachQuotaExhaustedTitle": "Bugünkü Koç Hakların Bitti",
+  "coachQuotaExhaustedBody": "Bugünkü koç hakların bitti. 1 reklam izle +2 soru hakkı kazan veya PRO'ya geç limitsiz sohbet et.",
+  "coachWatchAdOption": "1 Reklam İzle (+2 Soru)",
+  "coachUpgradeProOption": "PRO'ya Geç (Limitsiz Sohbet)",
+  "coachRewardSuccessSnackbar": "🎉 2 yeni soru hakkı kazandın!",
+  "playerVoiceoverAdTrialButton": "1 Reklam İzle, Bu Derslik Pro Sesli Rehberi Ücretsiz Aç",
+  "playerVoiceoverTrialUsedNote": "1 derslik ücretsiz sesli rehber deneme hakkınızı kullandınız. Tüm derslerde sınırsız sesli rehber için PRO'ya geçebilirsiniz.",
+  "playerVoiceoverTrialUnlockedSnackbar": "🎉 Bu ders için Pro Sesli Rehber aktif edildi!",
+  "playerVoiceoverTrialRewardTitle": "Pro Sesli Rehber (1 Seans Deneme)",
+  "adSponsoredLabel": "SPONSORLU REKLAM",
+  "adRewardReady": "Ödül Hazır!",
+  "adRewardCountdown": "Ödül için: {seconds} sn",
+  "@adRewardCountdown": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "adRewardSuccess": "Tebrikler! Ödül Hesabına Eklendi 🎉",
+  "adRewardClosePromptTitle": "Reklamı Kapat?",
+  "adRewardClosePromptBody": "Şimdi çıkarsan ödül kazanamazsın.",
+  "adRewardKeepWatching": "İzlemeye Devam Et",
+  "adRewardExit": "Çık"
+}
