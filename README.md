@@ -1,13 +1,5 @@
 # Home Yoga
 
-<p align="center">
-  <img src="assets/images/app_icon.png" alt="Home Yoga app icon" width="180" />
-</p>
-
-<p align="center">
-  <img src="assets/images/rotate_yoga_bg.jpg" alt="Home Yoga wellness studio" width="720" />
-</p>
-
 A modern Flutter wellness app designed to help users build sustainable yoga, pilates, mobility, and mindfulness habits through personalized daily practice plans, guided sessions, and progress tracking.
 
 ## Overview
